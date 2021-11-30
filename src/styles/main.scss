@@ -10,6 +10,7 @@
 @import './mixins/text-style';
 @import './mixins/positions';
 @import './mixins/flexbox';
+@import './mixins/border';
 
 @import './layouts/grids';
 
@@ -19,4 +20,21 @@
 
 html {
   background-color: $background;
+}
+
+* {
+  @include border;
+}
+
+.gnb {
+  @include flexbox;
+  background-color: $blue-yes;
+}
+
+.on {
+  color: $green-main;
+}
+
+.off {
+  color: $red-no;
 }
