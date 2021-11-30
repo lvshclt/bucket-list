@@ -1,9 +1,14 @@
+@import './constants/breakpoints';
 @import './constants/typography';
 @import './constants/colors';
 
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
+
+@import './mixins/responsive';
+
+@import './layouts/grids';
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
