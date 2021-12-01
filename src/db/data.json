@@ -1,0 +1,99 @@
+{
+  "status": [
+    { "id": 1, "status": "on-process", "name": "진행중" },
+    { "id": 2, "status": "accomplished", "name": "완료" },
+    { "id": 3, "status": "not-started", "name": "미시작" }
+  ],
+  "lines": [
+    {
+      "id": 1,
+      "number": "1",
+      "classification": "Achievement",
+      "importance": "3",
+      "goal": "문구사업 런칭하기",
+      "due": "2030",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 2,
+      "number": "2",
+      "classification": "Learn",
+      "importance": "1",
+      "goal": "첼로 배우기",
+      "due": "평생",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 3,
+      "number": "3",
+      "classification": "Adventure",
+      "importance": "1",
+      "goal": "스위스 여행가기",
+      "due": "평생",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 4,
+      "number": "4",
+      "classification": "Creative",
+      "importance": "5",
+      "goal": "myLife 앱 개발후 배포하기",
+      "due": "2082",
+      "status": "on-process",
+      "completed": ""
+    },
+    {
+      "id": 5,
+      "number": "5",
+      "classification": "People",
+      "importance": "3",
+      "goal": "연애하기",
+      "due": "평생",
+      "status": "accomplished",
+      "completed": "2018"
+    },
+    {
+      "id": 6,
+      "number": "6",
+      "classification": "Life style",
+      "importance": "5",
+      "goal": "경제적 자유 얻기",
+      "due": "2099",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 7,
+      "number": "7",
+      "classification": "Family",
+      "importance": "5",
+      "goal": "가족과 해외여행가기",
+      "due": "2024",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 8,
+      "number": "8",
+      "classification": "Creative",
+      "importance": "1",
+      "goal": "앨범디자인한 음반 내기",
+      "due": "2031",
+      "status": "not-started",
+      "completed": ""
+    },
+    {
+      "id": 9,
+      "number": "9",
+      "classification": "People",
+      "importance": "1",
+      "goal": "감바스 누가 누가 많이 먹나 내기하기",
+      "due": "2024",
+      "status": "on-process",
+      "completed": ""
+    }
+  ]
+}
