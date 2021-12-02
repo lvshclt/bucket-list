@@ -6,15 +6,24 @@
 [class^='ic-'] {
   @extend %icon-base;
 
-  &.yes:hover {
-    color: $green-main;
+  &.yes {
+    &.on,
+    &:hover {
+      color: $green-main;
+    }
   }
 
-  &.no:hover {
-    color: $red-no;
+  &.no {
+    &.on,
+    &:hover {
+      color: $red-no;
+    }
   }
 
-  &.not-really:hover {
-    color: $gray-main;
+  &.not-really {
+    &.on,
+    &:hover {
+      color: $gray-main;
+    }
   }
 }
