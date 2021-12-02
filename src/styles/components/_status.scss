@@ -46,25 +46,27 @@
     @include text-style(14);
 
     position: absolute;
+    left: 211px;
+    z-index: 3;
     height: 32.25px;
     padding: 7.13px 18.17px;
     font-weight: bold;
     border-radius: 81px;
-    z-index: 3;
-    left: 211px;
+
     &.on-process {
       background-color: $green-main;
     }
 
     &.accomplished {
-      left: 50%;
-      transform: translateX(-50%);
+      left: 50% !important;
       background-color: $cate-blue;
+      transform: translateX(-50%) !important;
     }
 
     &.not-started {
       background-color: $gray-main;
     }
+
     &.failed {
       background-color: $red-no;
     }
