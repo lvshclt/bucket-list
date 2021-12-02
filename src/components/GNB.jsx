@@ -11,12 +11,17 @@ export default function GNB() {
     setLoad(load + 1);
   }
 
+  function reset() {
+    if (document.getElementsByClassName('on')[0])
+      [...document.getElementsByClassName('on')][0].classList.remove('on');
+  }
+
   return (
     load && (
       <div className="gnb col-lg-12">
         <div className="left col-lg-3">
           <Link to="/">
-            <i className="ic-my-bucket-list yes"></i>
+            <i className="ic-my-bucket-list yes" onClick={reset}></i>
           </Link>
         </div>
         <div className="right">

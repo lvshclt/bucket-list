@@ -10,6 +10,7 @@ export default function Line({
   due,
   status,
   completed,
+  isDelMode,
 }) {
   return (
     <div className="line col-lg-12">
@@ -17,6 +18,7 @@ export default function Line({
         number={number}
         classification={classification}
         importance={importance}
+        isDelMode={isDelMode}
       />
       <Goal goal={goal} />
       <Status due={due} status={status} completed={completed} />

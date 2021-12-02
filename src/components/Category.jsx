@@ -1,4 +1,9 @@
-export default function Category({ number, classification, importance }) {
+export default function Category({
+  number,
+  classification,
+  importance,
+  isDelMode,
+}) {
   function func(classification) {
     let answer = classification.toLowerCase();
     answer = answer.replace(/\s+/g, '-');
@@ -7,6 +12,14 @@ export default function Category({ number, classification, importance }) {
 
   return (
     <div className="classification col-lg-3">
+      {isDelMode ? (
+        <div className="check">
+          <input type="checkbox" id={number} />
+          <label for={number}></label>
+        </div>
+      ) : (
+        ''
+      )}
       <span className="num col-lg-1">{number}</span>
       <div className="category">
         <div className={`label ${func(classification)}`}>{classification}</div>

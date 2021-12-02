@@ -1,8 +1,17 @@
 import Line from './Line';
-import dummy from '../db/data.json';
-
+import useFetch from '../hooks/useFetch';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
+import Sorry from './Sorry';
 export default function Content() {
-  const lines = dummy.lines;
+  const lines = useFetch('http://localhost:3001/lines/');
+
+  let isDelMode = false;
+  const bbb = useParams().aaa;
+  if (bbb === 'delete-goals') isDelMode = true;
+  else if (bbb !== undefined) {
+    return <Sorry />;
+  }
 
   return (
     <div className="content col-lg-12">
@@ -16,8 +25,17 @@ export default function Content() {
           due={line.due}
           status={line.status}
           completed={line.completed}
+          isDelMode={isDelMode}
         />
       ))}
+      {isDelMode && (
+        <div>
+          <button className={'no'}>삭제하기</button>
+          <Link to="/">
+            <button className={'not-really'}>돌아가기</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
