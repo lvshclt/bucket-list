@@ -39,10 +39,30 @@
 
 .classification {
   @include flexbox;
-  // @include border;
+  position: relative;
+
+  .check {
+    @include pos-center-y;
+    left: 0;
+
+    input {
+      display: none;
+    }
+
+    input + label {
+      @include pos-center;
+      width: 15px;
+      height: 15px;
+      background-color: $gray-main;
+      border-radius: 100%;
+    }
+
+    & input:checked + label {
+      background-color: $red-no;
+    }
+  }
 
   .num {
-    // @include border;
     @include text-style(24);
     font-weight: bold;
     text-align: center;
