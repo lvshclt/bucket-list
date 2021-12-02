@@ -1,7 +1,7 @@
-import dummy from '../db/data.json';
+import useFetch from '../hooks/useFetch';
 
 export default function TabBar() {
-  const goals = dummy.lines.length;
+  const goals = useFetch('http://localhost:3001/lines').length;
 
   return (
     <div className="bar col-lg-12">
