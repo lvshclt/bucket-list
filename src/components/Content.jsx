@@ -1,6 +1,5 @@
 import Line from './Line';
 import useFetch from '../hooks/useFetch';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import Sorry from './Sorry';
 export default function Content() {
@@ -28,14 +27,14 @@ export default function Content() {
           isDelMode={isDelMode}
         />
       ))}
-      {isDelMode && (
+      {/* {isDelMode && (
         <div>
           <button className={'no'}>삭제하기</button>
           <Link to="/">
             <button className={'not-really'}>돌아가기</button>
           </Link>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
