@@ -8,7 +8,7 @@ export default function Sorry() {
     <div className="sorry-content ">
       <div className="sorry">
         <img src={alert} alt="경고" />
-        <span>잘못된 접근입니다!</span>
+        <span>공부하면서 개발 중입니다</span>
         <Link to="/">
           <Button className="no" txt="메인으로" />
         </Link>
