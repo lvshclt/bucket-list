@@ -12,29 +12,125 @@
 @import './mixins/flexbox';
 @import './mixins/border';
 
+@import './components/button';
+@import './components/icon';
+@import './components/status';
+@import './components/classification';
+@import './components/line';
+
+@import './forms/addGoal.scss';
+
 @import './layouts/grids';
+@import './layouts/gnb';
+@import './layouts/bar';
 
 * {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
+  // @include border;
 }
 
 html {
   background-color: $background;
 }
 
-* {
-  @include border;
-}
-
+//
 .gnb {
+  @include flexbox(between);
+  height: 80px;
+
+  .left {
+    // @include border;
+    // width: 255px;
+    height: 21px;
+    @include flexbox;
+  }
+
+  .right {
+    // @include border;
+    @include flexbox(between);
+
+    width: 326px;
+    height: 42px;
+  }
+}
+
+//
+.bar {
+  height: 55px;
+
+  * {
+    @include flexbox;
+    // @include border;
+    text-align: center;
+  }
+
+  .bar-goals {
+    @include flexbox;
+
+    .num-of-goals {
+      margin-left: 8px;
+    }
+  }
+}
+
+.content {
+  // height: 480px;
+
+  .line {
+    height: 74px;
+    @include flexbox(start, center);
+  }
+}
+
+.bar {
+  @include flexbox(between);
+  @include text-style(16);
+  border-bottom: 3px solid $green-main;
+
+  & .bar-goals {
+    width: 55px;
+    @include flexbox(between);
+
+    & .num-of-goals {
+      color: $gray-main;
+    }
+  }
+}
+
+select option {
+  background: $background;
+  border: $green-main;
+
+  &:hover {
+    background: $green-main;
+    border: $green-main;
+  }
+}
+
+::selection {
+  background-color: $green-main;
+}
+
+//sorry
+.sorry-content {
   @include flexbox;
-  background-color: $blue-yes;
+  position: relative;
+  width: 100%;
+
+  .sorry {
+    @include flexbox(between, center);
+    position: absolute;
+    top: 130px;
+    flex-direction: column;
+    // width: 119px;
+    height: 167px;
+
+    & span {
+      @include text-style(16);
+    }
+  }
 }
 
-.on {
-  color: $green-main;
-}
-
-.off {
-  color: $red-no;
+html {
+  height: 200vh;
 }

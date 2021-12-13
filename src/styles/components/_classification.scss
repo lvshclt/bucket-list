@@ -41,25 +41,25 @@
   @include flexbox;
   position: relative;
 
-  .check {
+  .del {
     @include pos-center-y;
-    left: 0;
+    left: 0%;
 
-    input {
-      display: none;
-    }
+    // input {
+    //   display: none;
+    // }
 
-    input + label {
-      @include pos-center;
-      width: 15px;
-      height: 15px;
-      background-color: $gray-main;
-      border-radius: 100%;
-    }
+    // input + label {
+    //   @include pos-center;
+    //   width: 15px;
+    //   height: 15px;
+    //   background-color: $gray-main;
+    //   border-radius: 100%;
+    // }
 
-    & input:checked + label {
-      background-color: $red-no;
-    }
+    // & input:checked + label {
+    //   background-color: $red-no;
+    // }
   }
 
   .num {
