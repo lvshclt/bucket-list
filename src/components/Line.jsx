@@ -29,7 +29,6 @@ export default function Line({
   }
 
   //status
-
   const thisYear = new Date().getFullYear();
   let maxYear = thisYear + 1;
   let txt = due;
@@ -44,17 +43,18 @@ export default function Line({
   let ratio = (due - thisYear) / (maxYear - thisYear);
   if (ratio <= 0) ratio = 0;
 
-  const frontLineWid = 260 * ratio;
+  let frontLineWid = 285 * ratio;
   let yearPos = 223 * ratio;
-  if (!completed && due === '평생') yearPos = 223;
+  if (status !== completed && due === '평생') {
+    yearPos = 223;
+    frontLineWid = 285;
+  }
 
   return !isDelDone ? (
     <div className="line col-lg-12">
       <div className="classification col-lg-3">
         {isDelMode ? (
           <div className="del">
-            {/* <input type="checkbox" id={number} />
-           <label for={number}></label> */}
             <button className="no" onClick={del}>
               삭제
             </button>
@@ -81,6 +81,7 @@ export default function Line({
           style={{ width: `${frontLineWid}px` }}
         ></div>
         <div className={`year ${status}`} style={{ left: `${yearPos}px` }}>
+          {/* <div className={`year ${status}`} style={{ left: '223px' }}> */}
           {txt}
         </div>
       </div>
